@@ -71,4 +71,4 @@ for z, i in enumerate(urls):
     time.sleep(1)
     print(f"{id_name[z][1]}国家数据抓取完成，共获取{table.shape[0]}条数据")
 print(f'世界各国数据抓取完成，共获取到{tables.shape[0]}条数据')
-tables.to_excel(f'world_all_country_history_data.xlsx', index = None)
+tables.to_excel(f'world_all_country_history_data.xlsx', index = None) #注意，这里默认路径是你python运行的文件夹
