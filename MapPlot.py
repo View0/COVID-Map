@@ -5,7 +5,7 @@ from pyecharts import options as opts
 from pyecharts.globals import ThemeType #引入主题
 import time
 localtime = time.asctime( time.localtime(time.time()) )
-china_data = pd.read_excel('E:/microsoft_edge_downlonds/Sublime Text3/Sublime Text3_PythonCode/china_prov_data.xlsx') #先读取之前保存的数据
+china_data = pd.read_excel('E:/microsoft_edge_downlonds/Sublime Text3/Sublime Text3_PythonCode/china_prov_data.xlsx') #先读取之前保存的数据，注意这里的路径是保存excel表的位置
 data = pd.DataFrame(china_data[['name', 'total_confirm', 'total_dead', 'total_heal']])
 present_confirm = pd.DataFrame(data['total_confirm'][i] - data['total_dead'][i] - data['total_heal'][i] for i in range(data.shape[0]))
 present_data = pd.concat([pd.DataFrame(china_data['name']), present_confirm], axis = 1) #按列合并
